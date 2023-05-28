@@ -1,13 +1,13 @@
 /* Define our variables */
 
+const clearButton = document.getElementById("clear")
+const equalsButton = document.getElementById("equals")
 const numberButtons = document.querySelectorAll(".number")
 const operatorButtons = document.querySelectorAll(".operator")
-const equalsButton = document.getElementById("equals")
-const clearButton = document.getElementById("clear")
-let operator = "none"
 let firstOperand = ""
-let secondOperand = ""
+let operator = "none"
 let result = ""
+let secondOperand = ""
 
 /* Number button inputs */
 
