@@ -28,10 +28,11 @@ body {
     display:flex;
     justify-content:flex-end;
     padding-right:15px;
+    padding-left:15px;
     background-color:rgb(200, 255, 208);
     color: rgb(66, 79, 68);
     font-family: "courier new";
-    font-size:32px;
+    font-size:21px;
 }
 
 .button {

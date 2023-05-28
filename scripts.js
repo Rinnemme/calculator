@@ -39,7 +39,10 @@ let secondOperand = ""
 let result = ""
 
 function solve(a,b) {
-    if (operator === "none") {return}
+    if (operator === "none") {
+        result = firstOperand
+        display.textContent = result
+    }
     if (operator === "+") {
         console.log(firstOperand + " " + operator + " " + secondOperand)
         result = +a + +b
@@ -74,6 +77,9 @@ numberButtons.forEach(button => {
         } else {
             display.textContent = display.textContent + button.textContent
             secondOperand = secondOperand + button.textContent
+        }
+        if (display.textContent.length>21) {
+            display.textContent = display.textContent.slice(-21)
         }
     })
 })
