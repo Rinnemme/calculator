@@ -30,7 +30,8 @@ body {
     padding-right:15px;
     background-color:rgb(200, 255, 208);
     color: rgb(66, 79, 68);
-    font-size:28px;
+    font-family: "courier new";
+    font-size:32px;
 }
 
 .button {
