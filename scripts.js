@@ -34,17 +34,61 @@ const operatorButtons = document.querySelectorAll(".operator")
 const equalsButton = document.getElementById("equals")
 const clearButton = document.getElementById("clear")
 let operator = "none"
+let firstOperand = ""
+let secondOperand = ""
+let result = ""
+
+function solve(a,b) {
+    if (operator === "none") {return}
+    if (operator === "+") {
+        console.log(firstOperand + " " + operator + " " + secondOperand)
+        result = +a + +b
+    } else if(operator === "-") {
+        console.log(firstOperand + " " + operator + " " + secondOperand)
+        result = +a - +b
+    } else if(operator === "x") {
+        console.log(firstOperand + " " + operator + " " + secondOperand)
+        result = +a * +b
+    } else if(operator === "/") {
+        console.log(firstOperand + " " + operator + " " + secondOperand)
+        result = +a / +b
+    }
+    display.textContent = Math.round(result*10000000)/10000000
+    firstOperand = result
+    operator = "none"
+    secondOperand=""
+}
 
 function clearCalculator() {
     operator = "none"
     display.textContent = ""
+    firstOperand = ""
+    secondOperand = ""
 }
 
 numberButtons.forEach(button => {
-
     button.addEventListener("click", function() {
-        display.textContent = display.textContent + button.textContent
+        if(operator === "none") {
+            display.textContent = display.textContent + button.textContent
+            firstOperand = firstOperand + button.textContent
+        } else {
+            display.textContent = display.textContent + button.textContent
+            secondOperand = secondOperand + button.textContent
+        }
     })
 })
 
+operatorButtons.forEach(button => {
+    button.addEventListener("click", function() {
+        if(operator === "none") {
+            solve(firstOperand,secondOperand)
+        }
+        operator = button.textContent
+        display.textContent = ""
+    })
+})
+
+equalsButton.addEventListener("click", function() {
+    solve(firstOperand,secondOperand)
+})
 clearButton.addEventListener("click", clearCalculator)
