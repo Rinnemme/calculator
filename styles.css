@@ -41,7 +41,7 @@ body {
     border:1px solid blue;
 }
 
-.equals {
+#equals {
     flex:2;
 }
 

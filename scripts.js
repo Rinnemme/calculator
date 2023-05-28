@@ -28,3 +28,9 @@ If equals is hit
     } 
     
     */
+
+const numberButtons = document.querySelectorAll(".number")
+const operatorButtons = document.querySelectorAll(".operator")
+const equalsButton = document.getElementById("equals")
+const clearButton = document.getElementById("clear")
+let operator = "none"
