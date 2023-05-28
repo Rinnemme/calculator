@@ -78,8 +78,8 @@ numberButtons.forEach(button => {
             display.textContent = display.textContent + button.textContent
             secondOperand = secondOperand + button.textContent
         }
-        if (display.textContent.length>21) {
-            display.textContent = display.textContent.slice(-21)
+        if (display.textContent.length>22) {
+            display.textContent = display.textContent.slice(-22)
         }
     })
 })

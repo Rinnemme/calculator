@@ -27,8 +27,7 @@ body {
     border:1px solid green;
     display:flex;
     justify-content:flex-end;
-    padding-right:15px;
-    padding-left:15px;
+    padding-right:10px;
     background-color:rgb(200, 255, 208);
     color: rgb(66, 79, 68);
     font-family: "courier new";
