@@ -28,6 +28,9 @@ body {
     display:flex;
     justify-content:flex-end;
     padding-right:15px;
+    background-color:rgb(200, 255, 208);
+    color: rgb(66, 79, 68);
+    font-size:28px;
 }
 
 .button {
@@ -38,7 +41,8 @@ body {
     height:100%;
     text-align:center;
     border-radius:3px;
-    border:1px solid blue;
+    background-color:rgb(77, 77, 77);
+    color:white;
 }
 
 #equals {
@@ -50,18 +54,21 @@ body {
 }
 
 #clear {
-    margin-left:40%;
-    margin-right:40%;
-    border: 1px solid red;
+    margin-left:30%;
+    margin-right:30%;
+    color:white;
+    background-color: rgb(219, 83, 83);
 }
 
 .container {
     width:300px;
     height:400px;
     gap:10px;
-    border:5px solid black;
+    box-shadow:5px 5px 5px gray;
+    background-color:black;
     display:flex;
     flex-direction:column;
-    padding:10px;
+    padding:20px;
+    border-radius:5px;
 }
 
