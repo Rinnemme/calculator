@@ -34,3 +34,17 @@ const operatorButtons = document.querySelectorAll(".operator")
 const equalsButton = document.getElementById("equals")
 const clearButton = document.getElementById("clear")
 let operator = "none"
+
+function clearCalculator() {
+    operator = "none"
+    display.textContent = ""
+}
+
+numberButtons.forEach(button => {
+
+    button.addEventListener("click", function() {
+        display.textContent = display.textContent + button.textContent
+    })
+})
+
+clearButton.addEventListener("click", clearCalculator)
