@@ -29,18 +29,19 @@ numberButtons.forEach(button => {
 /* Big boy solve function */
 
 function solve(a,b) {
+    secondOperand=Number(secondOperand)
     if (operator === "none") {
-        result = firstOperand
+        result = Number(firstOperand)
         display.textContent = result
     }
     if (operator === "+") {
-        result = +a + +b
+        result = Number(Number(a) + Number(b))
     } else if(operator === "-") {
-        result = +a - +b
+        result = Number(a) - Number(b)
     } else if(operator === "x") {
-        result = +a * +b
+        result = Number(a) * Number(b)
     } else if(operator === "/") {
-        result = +a / +b
+        result = Number(a) / Number(b)
     }
     display.textContent = result
     firstOperand = result
@@ -52,7 +53,8 @@ function solve(a,b) {
 
 operatorButtons.forEach(button => {
     button.addEventListener("click", function() {
-        if(operator === "none") {
+        firstOperand=Number(firstOperand)
+        if(operator !== "none") {
             solve(firstOperand,secondOperand)
         }
         operator = button.textContent
