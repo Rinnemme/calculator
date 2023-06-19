@@ -1,6 +1,5 @@
 body {
-    background-image: url("background.jpeg");
-    background-size:cover;
+    background-color:#FFFFFF;
     font-family:sans-serif;
     height:100vh;
     margin:0;
